@@ -1,0 +1,29 @@
+{
+  "name": "@calorie-ai-app/auth",
+  "type": "module",
+  "exports": {
+    ".": {
+      "default": "./src/index.ts"
+    },
+    "./schemas": {
+      "types": "./src/schemas/index.ts",
+      "default": "./src/schemas/index.ts"
+    },
+    "./*": {
+      "default": "./src/*.ts"
+    }
+  },
+  "scripts": {},
+  "dependencies": {
+    "@better-auth/expo": "1.6.23",
+    "@calorie-ai-app/db": "*",
+    "@calorie-ai-app/env": "*",
+    "better-auth": "1.6.23",
+    "dotenv": "^17.4.2",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@calorie-ai-app/config": "*",
+    "typescript": "^6"
+  }
+}

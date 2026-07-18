@@ -1,0 +1,28 @@
+{
+  "name": "@calorie-ai-app/db",
+  "type": "module",
+  "exports": {
+    ".": {
+      "default": "./src/index.ts"
+    },
+    "./*": {
+      "default": "./src/*.ts"
+    }
+  },
+  "scripts": {
+    "db:generate": "drizzle-kit generate"
+  },
+  "dependencies": {
+    "@calorie-ai-app/env": "*",
+    "@libsql/client": "0.17.4",
+    "dotenv": "^17.4.2",
+    "drizzle-orm": "^0.45.2",
+    "libsql": "0.5.29",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@calorie-ai-app/config": "*",
+    "drizzle-kit": "^0.31.10",
+    "typescript": "^6"
+  }
+}

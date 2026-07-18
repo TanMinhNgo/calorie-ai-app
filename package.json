@@ -1,0 +1,32 @@
+{
+  "name": "calorie-ai-app",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "type": "module",
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "check-types": "turbo run check-types",
+    "dev:native": "turbo run dev -F native",
+    "dev:server": "turbo run dev -F server",
+    "db:generate": "turbo run db:generate -F @calorie-ai-app/db",
+    "deploy": "turbo run deploy -F @calorie-ai-app/infra",
+    "destroy": "turbo run destroy -F @calorie-ai-app/infra"
+  },
+  "dependencies": {
+    "@calorie-ai-app/env": "*",
+    "dotenv": "^17.4.2",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@calorie-ai-app/config": "*",
+    "@cloudflare/workers-types": "^5.20260714.1",
+    "@types/node": "^22.13.14",
+    "turbo": "^2.10.2",
+    "typescript": "^6"
+  },
+  "packageManager": "npm@11.15.0"
+}
